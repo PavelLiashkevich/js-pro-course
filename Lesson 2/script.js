@@ -110,3 +110,81 @@ fetch('https://jsonplaceholder.typicode.com/users')
 	})
 	console.log(newArray);
 })
+
+
+/**
+ * Написать цикл, который будет итерироватся от 1 до 100.
+ * На каждой итерации цикла нужно проверить:
+ * если число кратное 3 - то вывести в консоль строку Fizz,
+ * если число кратное 5 - то вывести в консоль строку Buzz,
+ * если число кратное и 3 и 5 - то вывести FizzBuzz
+ */
+ for (let num = 1; num < 101; num++ ) {
+    if ( num % 5 === 0 && num % 3 === 0 ){
+        document.write( num, " = FizzBuzz <br />" );
+    } else {
+        if ( num % 5 === 0 ){
+            document.write( num, " = Buzz <br />" );
+        } else {
+            if ( num % 3 === 0 ){
+                document.write( num, " = Fizz <br/ >" );
+            } else {
+                document.write( num, "<br/ >" );
+            }
+        }
+    }
+}
+
+
+/**
+ * Нарисовать прямоугольный треугольник с длинной катетов i (любое число больше 1).
+ * Для рисования использовать символ *(звездочка) или %(знак процента) и консоль.
+ * Пример вывода:
+ *
+ **
+ ***
+ ****
+ *****
+ ******
+ */
+let counter = 10;
+let str = ' ';
+let star = '*';
+
+for(let i = 0; i < counter; i++) {
+	str += star;
+	console.log(str);
+}
+
+
+/**
+ * Необходимо создать массив из 15 элементов. В массиве обязательно должны быть одинаковые значения.
+ * Напишите код, который уберет эти дубликаты из созданного массива.
+ */
+let array = [6, 99, 45, 8, 27, 45, 6, 77, 52, 8, 34, 7, 55, 87, 10];
+
+function getNewArr(arr) {
+	return arr.filter((e, i, a) => a.indexOf(e) == i)
+}
+console.log(getNewArr(array));
+
+
+/**
+ * Напишите код, который подсчитает количество повторяющихся элементов в массиве.
+ * И вывести это количество в консоль.
+ */
+let arrayTwo = [6, 99, 45, 8, 34, 45, 6, 77, 52, 8, 34, 7, 55, 87, 10];
+
+// Option 1
+function numberRepeat(arr) {
+	let counter = {};
+	arr.forEach(element => {
+		counter[element] = (counter[element] || 0) + 1;
+	});
+	return counter;
+}
+console.log(numberRepeat(arrayTwo));
+
+// Option 2
+let duplicateCount = (arr) => arr.length - new Set(arr).size;
+console.log(duplicateCount(arrayTwo));
