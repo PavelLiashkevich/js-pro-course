@@ -119,20 +119,16 @@ fetch('https://jsonplaceholder.typicode.com/users')
  * если число кратное 5 - то вывести в консоль строку Buzz,
  * если число кратное и 3 и 5 - то вывести FizzBuzz
  */
- for (let num = 1; num < 101; num++ ) {
-    if ( num % 5 === 0 && num % 3 === 0 ){
-        document.write( num, " = FizzBuzz <br />" );
-    } else {
-        if ( num % 5 === 0 ){
-            document.write( num, " = Buzz <br />" );
-        } else {
-            if ( num % 3 === 0 ){
-                document.write( num, " = Fizz <br/ >" );
-            } else {
-                document.write( num, "<br/ >" );
-            }
-        }
-    }
+for (let num = 1; num < 101; num++ ) {
+	if ( num % 5 === 0 && num % 3 === 0 ){
+		document.write( num, " = FizzBuzz <br />" );
+	} else if(num % 5 === 0) {
+		document.write( num, " = Buzz <br />" );
+	} else if ( num % 3 === 0 ) {
+		document.write( num, " = Fizz <br/ >" );      
+	} else {
+		document.write( num, "<br/ >" );
+   	}
 }
 
 
