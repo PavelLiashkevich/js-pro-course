@@ -128,7 +128,7 @@ for (let num = 1; num < 101; num++ ) {
 		document.write( num, " = Fizz <br/ >" );      
 	} else {
 		document.write( num, "<br/ >" );
-   	}
+   }
 }
 
 
