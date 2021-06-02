@@ -1,16 +1,16 @@
 import './App.css';
-import { EmojiList } from './components/EmojiList/EmojiList';
-import { Input } from './components/Input/Input';
-//import { Search } from './components/Search/Search';
+import { EmojiList } from './components/EmojiList';
+import { Search } from './components/Search';
+import { emojies } from './emojiList';
 
 function App() {
 	return (
 		<div className='App'>
 			<div>
-				<EmojiList />
+				<EmojiList array={emojies} />
 			</div>
 			<div>
-				<Input />
+				<Search />
 			</div>
 		</div>
 	);
