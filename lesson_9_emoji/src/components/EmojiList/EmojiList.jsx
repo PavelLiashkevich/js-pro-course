@@ -1,20 +1,14 @@
-import { emojies } from '../../emojiList';
-import { EmojiItem } from '../EmojiItem/EmojiItem';
+import { EmojiItem } from '../EmojiItem';
 
-export const EmojiList = () => {
+export const EmojiList = ({ array }) => {
 	function getID() {
 		return '_' + Math.random().toString(36).substr(2, 9);
 	}
-
 	return (
 		<ul>
-			{emojies.map(item => {
+			{array.map(item => {
 				return (
-					<EmojiItem
-						key={getID()}
-						title={item.title}
-						symbol={item.symbol}
-					></EmojiItem>
+					<EmojiItem key={getID()} symbol={item.symbol} title={item.title} />
 				);
 			})}
 		</ul>

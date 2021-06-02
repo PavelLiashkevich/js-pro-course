@@ -1,28 +1,31 @@
-//import React, { useState } from 'react';
-//import { Input } from '../Input/Input';
-//import { emojies } from '../../emojiList';
-//import { EmojiList } from '../EmojiList/EmojiList';
+import React, { useState } from 'react';
+import { Input } from '../Input';
+import { emojies } from '../../emojiList';
+import { EmojiList } from '../EmojiList';
+import './search.css';
 
-//export const Search = () => {
-//	const [arrayEmojies, setArrayEmojies] = useState[''];
+export const Search = () => {
+	const [arrayEmojies, setArrayEmojies] = useState(emojies);
 
-//	const mySearch = value => {
-//		const arrayEmojies = emojies.filter(emoji => {
-//			emoji.keywords
-//				.replace(/ /g, '')
-//				.toLowerCase()
-//				.includes(value.toLowerCase());
-//			setArrayEmojies(arrayEmojies);
-//		});
-//	};
-//	return (
-//		<div>
-//			<Input
-//				onChange={elem => {
-//					mySearch(elem.target.value);
-//				}}
-//			/>
-//			<EmojiList array={emojies} />
-//		</div>
-//	);
-//};
+	const mySearch = value => {
+		const arrayEmojies = emojies.filter(emoji => {
+			return (
+				emoji.keywords.toLowerCase().includes(value.toLowerCase()) ||
+				emoji.title.toLowerCase().includes(value.toLowerCase())
+			);
+		});
+		setArrayEmojies(arrayEmojies);
+	};
+	return (
+		<div className='search'>
+			<div className='input-container'>
+				<Input
+					onChange={elem => {
+						mySearch(elem.target.value);
+					}}
+				/>
+			</div>
+			<EmojiList array={arrayEmojies} />
+		</div>
+	);
+};
