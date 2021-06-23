@@ -1,17 +1,17 @@
-import './App.css';
-import { EmojiList } from './components/EmojiList';
-import { Search } from './components/Search';
-import { emojies } from './emojiList';
+import "./Emoji.css";
+import { EmojiList } from "./EmojiList";
+import { Search } from "./Search";
+import { emojiesList } from "./emojiesList";
 
 export const Emoji = () => {
-	return (
-		<div className='App'>
-			<div>
-				<EmojiList array={emojies} />
-			</div>
-			<div>
-				<Search />
-			</div>
-		</div>
-	);
+  return (
+    <div className="App">
+      <div>
+        <EmojiList array={emojiesList} />
+      </div>
+      <div>
+        <Search />
+      </div>
+    </div>
+  );
 };
