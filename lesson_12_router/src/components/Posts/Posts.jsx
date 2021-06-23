@@ -1,11 +1,11 @@
 import './App.css';
 import { PostsList } from './PostList/PostsList';
-import { posts } from './Posts';
+import { postsArray } from './postsArray';
 
 export const Posts = () => {
 	return (
 		<div className='App'>
-			<PostsList array={posts} />
+			<PostsList array={postsArray} />
 		</div>
 	);
 };

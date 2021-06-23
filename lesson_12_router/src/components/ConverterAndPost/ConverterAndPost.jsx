@@ -1,5 +1,5 @@
 import './App.css';
-import { Converter } from './components/Converter/Converter';
+import { Converter } from './Converter/Converter';
 import React from 'react';
 import { PostFacebook } from './components/PostFacebook/PostFacebook';
 import { data } from './data';

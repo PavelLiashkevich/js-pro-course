@@ -7,7 +7,7 @@ import {
 import { LandingPage } from './components/LandingPage/LandingPage';
 import { Clicker } from './components/Clicker/Clicker';
 import { Emoji } from './components/Emoji/Emoji';
-import { PostsApp } from './components/Posts/PostsApp';
+import { Posts } from './components/Posts/Posts';
 import { ConverterAndPost } from './components/ConverterAndPost/ConverterAndPost';
 
 export const CustomRouter = () => {
@@ -44,7 +44,7 @@ export const CustomRouter = () => {
 						<Emoji />
 					</Route>
 					<Route path='/posts'>
-						<PostsApp />
+						<Posts />
 					</Route>
 					<Route path='/converter-and-post'>
 						<ConverterAndPost />

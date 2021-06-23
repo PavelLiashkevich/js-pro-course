@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import styled from 'styled-components';
 import './postFacebook.css';
 
 export const PostFacebook = ({
@@ -17,8 +18,8 @@ export const PostFacebook = ({
 	};
 
 	return (
-		<div className='container'>
-			<div className='post'>
+		<Container>
+			<Post>
 				<div className='image'>
 					<img src={image} alt='avatar' />
 				</div>
@@ -27,8 +28,8 @@ export const PostFacebook = ({
 					<div className='point'>.</div>
 					<div className='location'>{location}</div>
 				</div>
-				<div className='description'>{postDescription}</div>
-				<div className='like'>
+				<Description>{postDescription}</Description>
+				<Like>
 					<button className='button-one' onClick={onClickLike}>
 						Like{count}
 					</button>
@@ -38,8 +39,36 @@ export const PostFacebook = ({
 					</button>
 					<div className='point'>.</div>
 					<div className='time-text'>{timeText}</div>
-				</div>
-			</div>
-		</div>
+				</Like>
+			</Post>
+		</Container>
 	);
 };
+
+const Container = styled.div`
+	display: flex;
+	justify-content: center;
+	align-items: center;
+`;
+
+const Post = styled.div`
+	border: 1px solid gray;
+	width: 700px;
+	height: 190px;
+	display: grid;
+	grid-template-columns: 200px 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+`;
+
+const Description = styled.div`
+	display: flex;
+	align-items: flex-end;
+	margin-bottom: 12px;
+	font-size: 20px;
+`;
+
+const Like = styled.div`
+	display: flex;
+	align-items: flex-end;
+	margin-bottom: 40px;
+`;
