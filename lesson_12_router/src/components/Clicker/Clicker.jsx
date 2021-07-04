@@ -16,7 +16,7 @@ export const Clicker = () => {
   };
 
   return (
-    <div className="App">
+    <div className="clicker_container">
       <div className="wrapper">
         <div>
           <h1>Clicker</h1>

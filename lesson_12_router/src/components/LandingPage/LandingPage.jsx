@@ -6,13 +6,13 @@ import styled from "styled-components";
 
 export const LandingPage = () => {
   return (
-    <div className="App">
+    <div className="landing_page">
       <div className="container container_two">
         <MyInformation>
           <Myfullname firstName="Pavel" lastName="Liashkevich" />
           <Description description={info} />
         </MyInformation>
-        <div className="image">
+        <div className="image-front">
           <Avatar src="Image/image_front_end.png" />
         </div>
       </div>

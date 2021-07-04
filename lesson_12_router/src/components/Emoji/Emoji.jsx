@@ -5,7 +5,7 @@ import { emojiesList } from "./emojiesList";
 
 export const Emoji = () => {
   return (
-    <div className="App">
+    <div className="emoji-container">
       <div>
         <EmojiList array={emojiesList} />
       </div>

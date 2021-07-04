@@ -1,6 +1,6 @@
-.App {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	background-color: #7aa899;
+.posts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #98d2be;
 }

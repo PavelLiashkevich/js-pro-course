@@ -4,7 +4,7 @@ import { postsArray } from "./postsArray";
 
 export const Posts = () => {
   return (
-    <div className="App">
+    <div className="posts">
       <PostsList array={postsArray} />
     </div>
   );
